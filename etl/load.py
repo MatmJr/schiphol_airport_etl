@@ -1,5 +1,5 @@
 import pandas as pd
-from extract import get_endpoint
+from etl.extract import get_endpoint
 
 def save_in_csv(endpoint, csv_name):
     data = get_endpoint(endpoint)
@@ -7,4 +7,4 @@ def save_in_csv(endpoint, csv_name):
     df.to_csv(csv_name, index=False)
     print(f"Salvo em {csv_name}")
 
-save_in_csv("flights", "flights.csv")
+# save_in_csv("flights", "flights.csv")
